@@ -6,9 +6,6 @@ import ujson
 
 time = datetime.now()
 date = datetime.strptime("2014-05","%Y-%m")
-json = ujson.loads(open("articles.json").read())
-
-i = 0
 
 while date<time:
     if date.month == 7:
@@ -26,19 +23,14 @@ while date<time:
             news_img = None
         news_title = news.find_all("div",class_="title")[0].text
         news_date = news.find_all("div",class_="date")[0].text
-        news_content = news.find_all("div",class_="header")[0].text
-        
-        print(news_date)
 
-        json[i] = {}
-        json[i]['image'] = news_img
-        json[i]['title'] = news_title
-        json[i]['date'] = news_date
-        json[i]['content'] = news_content
-        i += 1
+        news_content = news.find_all("div",class_="header")[0].text
+        # f=open("b.txt","w",encoding="utf-8")
+        # f.write(news_content)
+
+        headers = {'accept': 'application/json','Content-Type': 'application/json'}
+
+        data = ujson.dumps({"title": news_title,"date": news_date,"img": news_img,"content": news_content})
+        requests.put("http://127.0.0.1:8000/article",data=data,headers=headers)
 
     date += relativedelta(months=+1)
-    
-
-f = open("articles.json","w",encoding="utf-8")
-ujson.dump(json,f)
