@@ -26,7 +26,7 @@ while date<time:
 
         news_content = news.find_all("div",class_="header")[0].text
         # f=open("b.txt","w",encoding="utf-8")
-        # f.write(news_content)
+        # f.write(news_content)\
 
         headers = {'accept': 'application/json','Content-Type': 'application/json'}
 
