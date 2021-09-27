@@ -1,0 +1,40 @@
+{
+   "checksum": "ad6a55125c9b5ed362333f2a4d682563",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13276619544392377",
+            "guid": "57576e46-da09-4546-b6f0-c74a1acee218",
+            "id": "5",
+            "name": "Icons class - material library - Dart API",
+            "type": "url",
+            "url": "https://api.flutter.dev/flutter/material/Icons-class.html"
+         } ],
+         "date_added": "13276616879713544",
+         "date_modified": "13276619544392377",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13276616879713550",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13276616879713555",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
